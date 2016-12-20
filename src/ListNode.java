@@ -3,7 +3,6 @@
  */
 public class ListNode {
     ListNode next;
-
     int val;
 
     public void add(int data)
