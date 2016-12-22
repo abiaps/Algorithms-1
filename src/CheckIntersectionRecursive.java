@@ -3,7 +3,7 @@ import java.util.Iterator;
 
 import static com.sun.org.apache.xml.internal.security.keys.keyresolver.KeyResolver.length;
 
-public class CheckIntersection {
+public class CheckIntersectionRecursive {
     public static void main(String args[]) {
         String s1 = "0.1";
         String s2 = "0.01";
@@ -41,3 +41,4 @@ public class CheckIntersection {
 
     }
 }
+
