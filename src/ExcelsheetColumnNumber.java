@@ -11,8 +11,7 @@ public class ExcelsheetColumnNumber {
     public static int convertToTitle(String s) {
         if (s.length() == 1)
             return ((int) s.charAt(0)) - 64;
-        int i = 0;
-        int ans = ((int) s.charAt(0)) - 64;
+        int ans = ((int) s.charAt(0)) - 64, i = 0;
         while (i < s.length() - 1) {
             int op2 = ((int) s.charAt(i + 1)) - 64;
             ans = 26 * ans + op2;
