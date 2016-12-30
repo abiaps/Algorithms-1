@@ -14,6 +14,7 @@ public class IntersectionOfTwoArraysII {
             if (!h1.containsKey(nums1[i])) h1.put(Math.abs(nums1[i]), 1);
             else h1.put(Math.abs(nums1[i]), h1.get(Math.abs(nums1[i])) + 1);
 
+
         for(int j=0;j<nums2.length;j++)
             if (!h2.containsKey(nums2[j])) h2.put(Math.abs(nums2[j]), 1);
             else h2.put(Math.abs(nums2[j]), h2.get(Math.abs(nums2[j])) + 1);
