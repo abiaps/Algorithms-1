@@ -7,12 +7,12 @@ import java.util.List;
 public class BinaryTreeLevelOrderTraversal {
     public static List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> biglist = new ArrayList<List<Integer>>();
-        if (root == null)
-            return null;
-        List<TreeNode> l = new ArrayList<TreeNode>();
+        if (root == null) return biglist;
         List<Integer> list = new ArrayList<Integer>();
         list.add(root.val);
         biglist.add(new ArrayList<Integer>(list));
+        if (root.left == null && root.right == null) return biglist;
+        List<TreeNode> l = new ArrayList<TreeNode>();
         list.clear();
         if (root.left != null) {
             l.add(root.left);
@@ -52,7 +52,6 @@ public class BinaryTreeLevelOrderTraversal {
         if (root.right != null)
             child.add(root.right);
     }
-
     public static void main(String args[]) {
         TreeNode root = new TreeNode(0);
         TreeNode t1 = new TreeNode(2);
