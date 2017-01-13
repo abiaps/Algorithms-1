@@ -6,8 +6,8 @@ public class AddStrings {
         int bal = 0, sum = 0;
         StringBuffer sb = new StringBuffer();
         for (int j = m.length() - 1; j > 0; j--) {
-            int a = Character.getNumericValue(m.charAt(j));
-            int b = Character.getNumericValue(n.charAt(j));
+            int a = m.charAt(j) - '0';
+            int b = n.charAt(j) - '0';
             sum += a + b;
             if (sum > 9) {
                 bal = sum / 10;
@@ -17,13 +17,13 @@ public class AddStrings {
             sum = bal;
             bal = 0;
         }
-        sb.insert(0, Character.getNumericValue(m.charAt(0)) + Character.getNumericValue(n.charAt(0)) + sum);
+        sb.insert(0, m.charAt(0) - '0' + n.charAt(0) - '0' + sum);
         return sb.toString();
     }
 
     public static void main(String args[]) {
-        String s1 = "5450";
-        String s2 = "888889999";
+        String s1 = "10";
+        String s2 = "20";
         int l1 = s1.length();
         int l2 = s2.length();
         int d = Math.abs(l1 - l2);
