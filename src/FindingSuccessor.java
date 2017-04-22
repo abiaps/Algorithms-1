@@ -2,6 +2,10 @@ import sun.reflect.generics.tree.Tree;
 
 /**
  * Created by abiaps on 4/9/2017.
+ * Finding successor of a node
+ * case 1: if the node has right subtree, the successor is always the left most node of the right subtree (min value)
+ * case 2: if the node is a leaf node and has no subtree, a parent node/successor node is kept to keep track of the parent node and
+ *         return the parent node
  */
 public class FindingSuccessor {
     public static int findSuccessor(TreeNode search, TreeNode root, TreeNode parent) {

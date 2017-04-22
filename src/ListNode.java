@@ -7,7 +7,6 @@ public class ListNode {
 
     public void add(int data)
     {
-
         this.val=data;
         this.next=null;
     }
